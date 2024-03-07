@@ -54,7 +54,7 @@ namespace BookStore.Repositories.Implementation
 		{
 			var data = (from book in context.Book
 						join author in context.Author
-					  on book.AuthorId equals author.Id
+					    on book.AuthorId equals author.Id
 						join publisher in context.Publisher on book.PublisherId equals publisher.Id
 						join genre in context.Genre on book.GenreId equals genre.Id
 						select new Book
